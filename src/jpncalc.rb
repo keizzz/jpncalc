@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# 一番目の引数が数値でない場合はエラー
+# 一番目の引数が数値ではない場合はエラー
 unless ARGV[0] =~ /^[0-9]+$/
 	puts 'ARGV error'
 	exit 1
@@ -30,6 +30,7 @@ jpn10 = moneycalc moneyrest(ARGV[0].to_i, 50), 10
 jpn5 = moneycalc moneyrest(ARGV[0].to_i, 10), 5
 jpn1 = moneycalc moneyrest(ARGV[0].to_i, 5), 1
 
+# 必要な金額を出力
 puts <<-"EOB"
 10000円札: #{jpn10000}枚
 5000円札: #{jpn5000}枚
